@@ -1,0 +1,26 @@
+<body>
+  <div class="container">
+  <div class="card text center">
+    <div class="card body">
+      <h2> {{message}}
+        <div *ngIf="loading" class="spinner-border text-info" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </h2>
+      <span *ngIf="submitted && createNoteForm.invalid" >You must fill in all the fields </span>
+      <form [formGroup]="createNoteForm" (ngSubmit)=" addEditNote()">
+        <div>
+          <input formControlName="title" required class="form-control" type="text" placeholder="Tittle" id="title-note">
+        </div>
+        <div>
+          <input formControlName="description" required class="form-control" type="text" placeholder="Description" id="description-note">
+        </div>
+        <div>
+         <button class="btn-back" type="submit" routerLink="/notes">Back</button>
+          <button class="btn-add" type="submit">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>

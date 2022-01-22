@@ -1,0 +1,31 @@
+<body>
+  <div>
+    <section class="container">
+      <h1>Fast Notes</h1>
+      <p>Your notes as fast as an entrance to pits</p>
+      <svg width="464px" height="445px">
+        <circle cx="95" cy="91" r="300" fill="#00A19B" stroke="none"/>
+      </svg>
+      <section class="container-login">
+            <div id="ovalo"></div>
+        <form class="form-login" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <h2>Welcome</h2>
+            <input class="form-control" type="email" formControlName="email" placeholder="     Email" id="email">
+            <input class="form-control" type="password" formControlName="password" placeholder="     Contraseña" id="password">
+            <h3>Join</h3>
+            <button class="btn-login" type="submit" ><i class="fas fa-angle-double-right"></i></button>
+            <p class="text-register">
+              Create account
+                <a [routerLink]="['/register']">Regíster</a></p>
+            <!-- <p class="text-login"><a [routerLink]="['login']">Inicie sesión</a></p> -->
+        </form>
+
+        <svg width="221px" height="233px" class="ellipse-2">
+          <circle cx="154" cy="579" r="100" fill="#00A19B" stroke="none"/>
+       </svg>
+
+
+      </section>
+    </section>
+  </div>
+</body>
